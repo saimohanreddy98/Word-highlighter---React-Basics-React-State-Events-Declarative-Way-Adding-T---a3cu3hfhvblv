@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import '../styles/App.css';
 import { IgnoreCaseToggle } from './IgnoreCaseToggle';
 import { ParagraphInput } from './ParagraphInput';
@@ -38,11 +38,11 @@ const App = () => {
   }
   return (
     <div id="main">
-      <ParagraphInput  pRef={ref} />
+      <ParagraphInput pRef={ref} />
       <div>Total matches:- <span id="words-counter">{wordCount}</span></div>
-      <WordInput  handleChange={handleWordInput} value={word}/>
+      <WordInput handleChange={handleWordInput} value={word} />
       <br />
-      <IgnoreCaseToggle checked={ignoreCase} onChange={handleChangeToggle}/>
+      <IgnoreCaseToggle checked={ignoreCase} onChange={handleChangeToggle} />
       <span id="words-counter">{wordCount}</span>
     </div>
   )
